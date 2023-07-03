@@ -35,6 +35,7 @@ class NapaOnlineScraper:
         searchCentersInputId = "autocare-search-input"
         searchCentersButtonXpath = "//a[@id='autocare-search-button']"
         selectCentersTypeXpath = "//select[@id='autocare-type-select']"
+        seeMoreButtonXpath = "//a[@id='see_more' and @style='display: block;']"
         
         # loading website in the launched browser
         self.driver.get(self.url)
@@ -68,6 +69,19 @@ class NapaOnlineScraper:
                 
                 # waiting for queried data to load
                 randomWait(3,5)
+                
+                while True:
+                    try:
+                        # clicking on see more button to show all centers in the specific state
+                        humanClick(self.driver,seeMoreButtonXpath)
+                        randomWait(3,5)
+                    except: 
+                        # break the loop when there is no see more button available
+                        break
+                
+                
+                
+                
                 
                 
                 
