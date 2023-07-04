@@ -1,4 +1,4 @@
-NapaOnline Scraper
+<h1>NapaOnline Scraper</h1>
 
 The NapaOnline Scraper is a Python script that allows you to scrape data from the NapaOnline website. It searches for autocare centers in various US states and stores the scraped data in a CSV file.
 
